@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 862px -200px;
+}
+
+#features {
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: -400px 300px;
+}
+
+.main-nav {
+  transform: all 0.3s;
+}
+
+.span-top,
+.span-middle,
+.span-bottom {
+  width: 30px;
+  height: 2px;
+  display: inline-block;
+  background-color: #000;
+  position: absolute;
+  right: 20px;
+  transform: rotate(0);
+  transition: all 0.2s linear;
+}
+.span-top {
+  top: 25px;
+}
+.span-middle {
+  top: 35px;
+}
+.span-bottom {
+  top: 45px;
+}
+
+.open .span-top {
+  top: 30px;
+  transform: rotate(223deg);
+}
+.open .span-bottom {
+  top: 30px;
+  transform: rotate(-223deg);
+}
+
+.open .span-middle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: 523px;
+    background-position: 72px -50px;
+  }
+  #features {
+    background-image: none;
+  }
+}
